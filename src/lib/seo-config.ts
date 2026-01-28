@@ -75,12 +75,12 @@ export const getOrganizationSchema = () => ({
   logo: `${SITE_CONFIG.url}/logo.png`,
   sameAs: [
     "https://twitter.com/BestLiftCream",
-    "https://www.facebook.com/BestLiftingCream",
-    "https://www.instagram.com/bestliftingcream",
+    "https://www.facebook.com/BestLiftCream",
+    "https://www.instagram.com/bestliftcream",
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "contact@bestliftingcream.com",
+    email: "contact@bestliftcream.com",
     contactType: "customer service",
   },
 });

@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import BestLiftCreams from "./pages/BestLiftCreams";
+import ProductReview from "./pages/ProductReview";
 import EditorialMission from "./pages/EditorialMission";
 import HowWeTest from "./pages/HowWeTest";
 import ExpertTeam from "./pages/ExpertTeam";
@@ -28,6 +29,7 @@ const App = () => (
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
             <Route path="/best-lift-creams" element={<BestLiftCreams />} />
+            <Route path="/reviews/:productId" element={<ProductReview />} />
             <Route path="/editorial-mission" element={<EditorialMission />} />
             <Route path="/how-we-test" element={<HowWeTest />} />
             <Route path="/experts" element={<ExpertTeam />} />
