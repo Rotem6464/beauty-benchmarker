@@ -1,47 +1,113 @@
 import { Link } from "react-router-dom";
 
+const footerLinks = {
+  products: [
+    { label: "All Lifting Creams", href: "/#products" },
+    { label: "Best for Oily Skin", href: "/?skin=oily" },
+    { label: "Best for Dry Skin", href: "/?skin=dry" },
+    { label: "Best for Sensitive Skin", href: "/?skin=sensitive" },
+  ],
+  company: [
+    { label: "Editorial Mission", href: "/editorial-mission" },
+    { label: "How We Test", href: "/how-we-test" },
+    { label: "Our Expert Team", href: "/experts" },
+    { label: "Contact Us", href: "/contact" },
+  ],
+  legal: [
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
+  ],
+};
+
 export function SiteFooter() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-background py-12" role="contentinfo">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8">
+          {/* Brand */}
           <div>
-            <h3 className="font-bold text-lg mb-4">BestLiftingCream.com</h3>
-            <p className="text-muted text-sm">
-              Your trusted source for lifting cream comparisons and reviews. Updated January 2026.
+            <Link to="/" className="text-xl font-bold block mb-4">
+              BestLiftingCream.com
+            </Link>
+            <p className="text-muted text-sm mb-4">
+              Your trusted source for independent, expert-tested lifting cream reviews. Updated January 2026.
+            </p>
+            <p className="text-muted text-xs">
+              © {currentYear} BestLiftingCream.com
+              <br />All rights reserved.
             </p>
           </div>
+
+          {/* Products */}
           <div>
-            <h4 className="font-semibold mb-4">By Skin Type</h4>
-            <ul className="space-y-2 text-muted text-sm">
-              <li><a href="#" className="hover:text-background transition-colors">Oily Skin</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Dry Skin</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Sensitive Skin</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">Combination Skin</a></li>
-            </ul>
+            <h3 className="font-semibold mb-4">Products</h3>
+            <nav aria-label="Product categories">
+              <ul className="space-y-2 text-muted text-sm">
+                {footerLinks.products.map((link) => (
+                  <li key={link.href}>
+                    <Link 
+                      to={link.href} 
+                      className="hover:text-background transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
+
+          {/* Company */}
           <div>
-            <h4 className="font-semibold mb-4">By Age</h4>
-            <ul className="space-y-2 text-muted text-sm">
-              <li><a href="#" className="hover:text-background transition-colors">30s</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">40s</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">50s</a></li>
-              <li><a href="#" className="hover:text-background transition-colors">60+</a></li>
-            </ul>
+            <h3 className="font-semibold mb-4">Company</h3>
+            <nav aria-label="Company links">
+              <ul className="space-y-2 text-muted text-sm">
+                {footerLinks.company.map((link) => (
+                  <li key={link.href}>
+                    <Link 
+                      to={link.href} 
+                      className="hover:text-background transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
+
+          {/* Legal */}
           <div>
-            <h4 className="font-semibold mb-4">About Us</h4>
-            <ul className="space-y-2 text-muted text-sm">
-              <li><Link to="/editorial-mission" className="hover:text-background transition-colors">Editorial Mission</Link></li>
-              <li><Link to="/how-we-test" className="hover:text-background transition-colors">How We Test</Link></li>
-              <li><Link to="/experts" className="hover:text-background transition-colors">Our Expert Team</Link></li>
-              <li><a href="mailto:contact@bestliftingcream.com" className="hover:text-background transition-colors">Contact</a></li>
-            </ul>
+            <h3 className="font-semibold mb-4">Legal</h3>
+            <nav aria-label="Legal links">
+              <ul className="space-y-2 text-muted text-sm">
+                {footerLinks.legal.map((link) => (
+                  <li key={link.href}>
+                    <Link 
+                      to={link.href} 
+                      className="hover:text-background transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </div>
-        <div className="border-t border-muted/20 mt-8 pt-8 text-center text-muted text-sm">
-          <p>Affiliate Disclosure: We may earn commissions from qualifying purchases.</p>
-          <p className="mt-2">&copy; 2026 BestLiftingCream.com. All rights reserved.</p>
+
+        {/* Affiliate Disclosure Bar */}
+        <div className="border-t border-muted/20 mt-8 pt-8 text-center">
+          <p className="text-muted text-sm mb-2">
+            <strong>Affiliate Disclosure:</strong> We may earn commissions from qualifying purchases. 
+            This never influences our rankings or recommendations.{" "}
+            <Link to="/affiliate-disclosure" className="underline hover:text-background">
+              Learn more
+            </Link>
+          </p>
         </div>
       </div>
     </footer>
