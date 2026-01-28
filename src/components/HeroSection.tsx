@@ -38,7 +38,7 @@ export function HeroSection() {
               asChild
               onClick={() => handleCTAClick("find_your_match")}
             >
-              <a href="#products">Find Your Match</a>
+              <Link to="/best-lift-creams">Find Your Match</Link>
             </Button>
             <Button 
               size="lg" 
@@ -46,7 +46,7 @@ export function HeroSection() {
               asChild
               onClick={() => handleCTAClick("view_all_products")}
             >
-              <Link to="/#products">View All Products</Link>
+              <Link to="/best-lift-creams">View All Products</Link>
             </Button>
           </div>
 

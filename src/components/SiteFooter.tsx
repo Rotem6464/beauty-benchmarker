@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const footerLinks = {
   products: [
-    { label: "All Lifting Creams", href: "/#products" },
-    { label: "Best for Oily Skin", href: "/?skin=oily" },
-    { label: "Best for Dry Skin", href: "/?skin=dry" },
-    { label: "Best for Sensitive Skin", href: "/?skin=sensitive" },
+    { label: "All Lifting Creams", href: "/best-lift-creams" },
+    { label: "Best for Oily Skin", href: "/best-lift-creams?skin=oily" },
+    { label: "Best for Dry Skin", href: "/best-lift-creams?skin=dry" },
+    { label: "Best for Sensitive Skin", href: "/best-lift-creams?skin=sensitive" },
   ],
   company: [
     { label: "Editorial Mission", href: "/editorial-mission" },

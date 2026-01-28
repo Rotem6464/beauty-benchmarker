@@ -20,9 +20,14 @@ export interface PageSEO {
 
 export const PAGE_SEO: Record<string, PageSEO> = {
   home: {
-    title: "Best Lifting Creams 2026 - Expert Reviews & Comparisons",
+    title: "Best Lifting Creams 2026 - Expert Reviews & Comparisons | BestLiftingCream.com",
     description: "Compare 60+ lifting creams by skin type, climate, age, ingredients, and price. Expert-tested recommendations for firmer, younger-looking skin.",
     path: "/",
+  },
+  bestLiftCreams: {
+    title: "Best Lift Creams 2026 - Complete Comparison & Reviews",
+    description: "Browse and compare all 60+ lifting creams tested by our experts. Filter by skin type, price, ingredients, and ethical values to find your perfect match.",
+    path: "/best-lift-creams",
   },
   editorialMission: {
     title: "Our Editorial Mission - BestLiftingCream.com",
@@ -137,6 +142,7 @@ export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
 // All routes for sitemap generation
 export const ALL_ROUTES = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
+  { path: "/best-lift-creams", priority: 0.9, changefreq: "weekly" },
   { path: "/editorial-mission", priority: 0.8, changefreq: "monthly" },
   { path: "/how-we-test", priority: 0.8, changefreq: "monthly" },
   { path: "/experts", priority: 0.7, changefreq: "monthly" },

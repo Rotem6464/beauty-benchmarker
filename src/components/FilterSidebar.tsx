@@ -2,6 +2,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { filterOptions } from "@/data/products";
+import { trackFilterSelect } from "@/lib/analytics";
 
 interface Filters {
   skinTypes: string[];
@@ -20,9 +21,16 @@ interface FilterSidebarProps {
 export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
   const toggleFilter = (category: keyof Omit<Filters, 'priceRange'>, value: string) => {
     const current = filters[category] as string[];
-    const updated = current.includes(value)
-      ? current.filter((v) => v !== value)
-      : [...current, value];
+    const isAdding = !current.includes(value);
+    const updated = isAdding
+      ? [...current, value]
+      : current.filter((v) => v !== value);
+    
+    // Track filter selection when adding a filter
+    if (isAdding) {
+      trackFilterSelect(category, value);
+    }
+    
     onFilterChange({ ...filters, [category]: updated });
   };
 

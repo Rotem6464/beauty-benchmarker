@@ -40,6 +40,18 @@ export const trackCTAClick = (ctaName: string, pagePath: string, ctaPosition?: s
   });
 };
 
+// Track filter selection
+export const trackFilterSelect = (filterType: string, filterValue: string, pagePath?: string) => {
+  if (!isGALoaded()) return;
+  
+  window.gtag?.("event", "filter_select", {
+    event_category: "engagement",
+    filter_type: filterType,
+    filter_value: filterValue,
+    page_path: pagePath || window.location.pathname,
+  });
+};
+
 // Track scroll depth milestones
 export const initScrollDepthTracking = () => {
   if (typeof window === "undefined") return;

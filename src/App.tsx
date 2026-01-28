@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
+import BestLiftCreams from "./pages/BestLiftCreams";
 import EditorialMission from "./pages/EditorialMission";
 import HowWeTest from "./pages/HowWeTest";
 import ExpertTeam from "./pages/ExpertTeam";
@@ -26,6 +27,7 @@ const App = () => (
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
+            <Route path="/best-lift-creams" element={<BestLiftCreams />} />
             <Route path="/editorial-mission" element={<EditorialMission />} />
             <Route path="/how-we-test" element={<HowWeTest />} />
             <Route path="/experts" element={<ExpertTeam />} />
