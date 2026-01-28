@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { ProductCard } from "@/components/ProductCard";
 import { FilterSidebar } from "@/components/FilterSidebar";
 import { ComparisonTable } from "@/components/ComparisonTable";
@@ -31,16 +31,38 @@ interface Filters {
 }
 
 const BestLiftCreams = () => {
-  const [filters, setFilters] = useState<Filters>({
-    skinTypes: [],
-    climates: [],
-    ageGroups: [],
-    tiers: [],
-    values: [],
-    priceRange: [0, 600],
-  });
+  const [searchParams] = useSearchParams();
+  
+  // Parse URL query params for initial filter state
+  const getInitialFilters = (): Filters => {
+    const skinParam = searchParams.get("skin");
+    const validSkinTypes = ["oily", "dry", "sensitive", "combination"];
+    
+    return {
+      skinTypes: skinParam && validSkinTypes.includes(skinParam) ? [skinParam] : [],
+      climates: [],
+      ageGroups: [],
+      tiers: [],
+      values: [],
+      priceRange: [0, 600],
+    };
+  };
 
+  const [filters, setFilters] = useState<Filters>(getInitialFilters);
   const [viewMode, setViewMode] = useState<"grid" | "table">("grid");
+
+  // Re-apply filters when URL changes
+  useEffect(() => {
+    const skinParam = searchParams.get("skin");
+    const validSkinTypes = ["oily", "dry", "sensitive", "combination"];
+    
+    if (skinParam && validSkinTypes.includes(skinParam)) {
+      setFilters(prev => ({
+        ...prev,
+        skinTypes: [skinParam],
+      }));
+    }
+  }, [searchParams]);
 
   // Initialize analytics on mount
   useEffect(() => {
