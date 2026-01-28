@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Star, Leaf, Heart } from "lucide-react";
 import { Product } from "@/data/products";
+import { AffiliateLink } from "@/components/AffiliateLink";
 
 interface ProductCardProps {
   product: Product;
@@ -28,7 +29,11 @@ export function ProductCard({ product, rank }: ProductCardProps) {
       )}
 
       {rank && (
-        <div className="absolute top-2 left-2 bg-foreground text-background rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10" style={{ top: product.isOkoaskin ? '2.5rem' : '0.5rem' }}>
+        <div 
+          className="absolute top-2 left-2 bg-foreground text-background rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10" 
+          style={{ top: product.isOkoaskin ? '2.5rem' : '0.5rem' }}
+          aria-label={`Ranked #${rank}`}
+        >
           #{rank}
         </div>
       )}
@@ -37,9 +42,11 @@ export function ProductCard({ product, rank }: ProductCardProps) {
         <div className="aspect-square bg-muted rounded-lg mb-4 overflow-hidden">
           <img
             src={product.image}
-            alt={`${product.brand} ${product.name}`}
+            alt={`${product.brand} ${product.name} - ${product.tier} lifting cream`}
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             loading="lazy"
+            width="400"
+            height="400"
           />
         </div>
 
@@ -47,12 +54,12 @@ export function ProductCard({ product, rank }: ProductCardProps) {
           <Badge className={tierColors[product.tier]}>{product.tier}</Badge>
           {product.isVegan && (
             <Badge variant="outline" className="text-success border-success">
-              <Leaf className="w-3 h-3 mr-1" /> Vegan
+              <Leaf className="w-3 h-3 mr-1" aria-hidden="true" /> Vegan
             </Badge>
           )}
           {product.isCrueltyFree && (
             <Badge variant="outline" className="text-accent-pink border-accent-pink">
-              <Heart className="w-3 h-3 mr-1" /> CF
+              <Heart className="w-3 h-3 mr-1" aria-hidden="true" /> CF
             </Badge>
           )}
         </div>
@@ -61,9 +68,9 @@ export function ProductCard({ product, rank }: ProductCardProps) {
         <p className="text-muted-foreground text-sm mb-2">{product.brand}</p>
 
         <div className="flex items-center gap-1 mb-2">
-          <Star className="w-4 h-4 fill-accent-gold text-accent-gold" />
+          <Star className="w-4 h-4 fill-accent-gold text-accent-gold" aria-hidden="true" />
           <span className="font-medium">{product.rating}</span>
-          <span className="text-muted-foreground text-sm">({product.reviewCount.toLocaleString()})</span>
+          <span className="text-muted-foreground text-sm">({product.reviewCount.toLocaleString()} reviews)</span>
         </div>
 
         <div className="mb-3">
@@ -71,7 +78,7 @@ export function ProductCard({ product, rank }: ProductCardProps) {
           <p className="font-medium text-brand-700">{product.primaryIngredient}</p>
         </div>
 
-        <div className="flex flex-wrap gap-1 mb-3">
+        <div className="flex flex-wrap gap-1 mb-3" aria-label="Key benefits">
           {product.keyBenefits.slice(0, 3).map((benefit, i) => (
             <span key={i} className="text-xs bg-muted px-2 py-1 rounded-full">
               {benefit}
@@ -91,9 +98,9 @@ export function ProductCard({ product, rank }: ProductCardProps) {
           className={`w-full ${product.isOkoaskin ? 'bg-gradient-to-r from-brand-600 to-accent-pink hover:from-brand-700 hover:to-accent-pink/90' : ''}`}
           asChild
         >
-          <a href={product.affiliateUrl} target="_blank" rel="noopener noreferrer">
-            {product.isOkoaskin ? 'Get Best Price' : 'View Deal'}
-          </a>
+          <AffiliateLink href={product.affiliateUrl} productName={product.name}>
+            {product.isOkoaskin ? 'Get Best Price' : 'Check Price'}
+          </AffiliateLink>
         </Button>
       </CardFooter>
     </Card>

@@ -2,6 +2,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PAGE_SEO } from "@/lib/seo-config";
 import {
   Shield,
   Award,
@@ -18,7 +21,9 @@ import {
 const EditorialMission = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead page={PAGE_SEO.editorialMission} />
       <SiteHeader />
+      <Breadcrumbs items={[{ label: "Editorial Mission" }]} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-accent-pink text-background py-16">

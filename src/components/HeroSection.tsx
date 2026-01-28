@@ -1,11 +1,17 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Star, Shield, Award, TrendingUp } from "lucide-react";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function HeroSection() {
+  const handleCTAClick = (ctaName: string) => {
+    trackCTAClick(ctaName, "/", "hero");
+  };
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-900 via-brand-800 to-accent-pink text-white">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 py-16 md:py-24 relative">
         <div className="max-w-4xl mx-auto text-center">
@@ -26,38 +32,48 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" variant="hero">
-              Find Your Match
+            <Button 
+              size="lg" 
+              variant="hero"
+              asChild
+              onClick={() => handleCTAClick("find_your_match")}
+            >
+              <a href="#products">Find Your Match</a>
             </Button>
-            <Button size="lg" variant="heroOutline">
-              View All Products
+            <Button 
+              size="lg" 
+              variant="heroOutline"
+              asChild
+              onClick={() => handleCTAClick("view_all_products")}
+            >
+              <Link to="/#products">View All Products</Link>
             </Button>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             <div className="flex flex-col items-center">
-              <div className="bg-white/20 rounded-full p-3 mb-2">
+              <div className="bg-white/20 rounded-full p-3 mb-2" aria-hidden="true">
                 <Star className="w-6 h-6" />
               </div>
               <span className="font-bold text-2xl">60+</span>
               <span className="text-brand-200 text-sm">Products Tested</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-white/20 rounded-full p-3 mb-2">
+              <div className="bg-white/20 rounded-full p-3 mb-2" aria-hidden="true">
                 <Shield className="w-6 h-6" />
               </div>
               <span className="font-bold text-2xl">7</span>
               <span className="text-brand-200 text-sm">Filter Categories</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-white/20 rounded-full p-3 mb-2">
+              <div className="bg-white/20 rounded-full p-3 mb-2" aria-hidden="true">
                 <Award className="w-6 h-6" />
               </div>
               <span className="font-bold text-2xl">Expert</span>
               <span className="text-brand-200 text-sm">Reviewed</span>
             </div>
             <div className="flex flex-col items-center">
-              <div className="bg-white/20 rounded-full p-3 mb-2">
+              <div className="bg-white/20 rounded-full p-3 mb-2" aria-hidden="true">
                 <TrendingUp className="w-6 h-6" />
               </div>
               <span className="font-bold text-2xl">2026</span>
@@ -67,7 +83,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-background to-transparent" aria-hidden="true"></div>
     </section>
   );
 }

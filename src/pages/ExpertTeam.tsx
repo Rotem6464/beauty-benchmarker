@@ -3,6 +3,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PAGE_SEO } from "@/lib/seo-config";
 import {
   Award,
   GraduationCap,
@@ -121,7 +124,9 @@ const experts: Expert[] = [
 const ExpertTeam = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead page={PAGE_SEO.experts} />
       <SiteHeader />
+      <Breadcrumbs items={[{ label: "Our Experts" }]} />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-brand-900 via-brand-800 to-accent-pink text-background py-16">
