@@ -95,7 +95,51 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static above-the-fold content for SEO crawlers (replaced by React on hydration) -->
+      <header style="background: linear-gradient(135deg, #1e1e3f 0%, #2d1f47 100%); color: white; padding: 4rem 1rem; text-align: center;">
+        <nav style="max-width: 1200px; margin: 0 auto 2rem; display: flex; justify-content: space-between; align-items: center;">
+          <a href="/" style="font-size: 1.25rem; font-weight: bold; color: white; text-decoration: none;">BestLiftCream.com</a>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="/best-lift-creams" style="color: rgba(255,255,255,0.9); text-decoration: none;">Best Lift Creams</a>
+            <a href="/how-we-test" style="color: rgba(255,255,255,0.9); text-decoration: none;">How We Test</a>
+            <a href="/experts" style="color: rgba(255,255,255,0.9); text-decoration: none;">Our Experts</a>
+            <a href="/editorial-mission" style="color: rgba(255,255,255,0.9); text-decoration: none;">Editorial Mission</a>
+          </div>
+        </nav>
+        <p style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.875rem; margin-bottom: 1rem;">Updated January 2026</p>
+        <h1 style="font-size: clamp(2rem, 5vw, 3.5rem); font-weight: bold; margin-bottom: 1.5rem; line-height: 1.2;">Find Your Perfect Lifting Cream</h1>
+        <p style="font-size: 1.25rem; color: rgba(255,255,255,0.85); max-width: 42rem; margin: 0 auto 2rem;">Compare 60+ lifting creams by skin type, climate, age, ingredients, and price. Expert-tested recommendations for firmer, younger-looking skin.</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="/best-lift-creams" style="display: inline-block; background: linear-gradient(135deg, #e91e8c, #f472b6); color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;">Find Your Match</a>
+          <a href="/best-lift-creams" style="display: inline-block; border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none;">View All Products</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; max-width: 48rem; margin: 3rem auto 0;">
+          <div><span style="font-size: 1.5rem; font-weight: bold;">60+</span><br><span style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Products Tested</span></div>
+          <div><span style="font-size: 1.5rem; font-weight: bold;">7</span><br><span style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Filter Categories</span></div>
+          <div><span style="font-size: 1.5rem; font-weight: bold;">Expert</span><br><span style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Reviewed</span></div>
+          <div><span style="font-size: 1.5rem; font-weight: bold;">2026</span><br><span style="font-size: 0.875rem; color: rgba(255,255,255,0.7);">Latest Data</span></div>
+        </div>
+      </header>
+      <main style="padding: 2rem 1rem; max-width: 1200px; margin: 0 auto;">
+        <h2 style="font-size: 1.875rem; font-weight: bold; margin-bottom: 1rem;">Compare Top Lifting Creams</h2>
+        <p style="color: #666; margin-bottom: 2rem;">Loading product comparisons...</p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Hide Lovable badge in production -->
+    <style>
+      [data-lovable-badge], 
+      .lovable-badge,
+      #lovable-badge,
+      a[href*="lovable.dev"][style*="fixed"],
+      div[style*="fixed"][style*="bottom"][style*="right"] > a[href*="lovable"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
   </body>
 </html>
