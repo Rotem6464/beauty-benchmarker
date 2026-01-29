@@ -69,6 +69,11 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: "Tired of greasy lifting creams? We tested 60+ formulas on oily skin. Discover oil-free, non-comedogenic creams that firm skin without breakouts or shine.",
     path: "/best-lifting-cream-oily-skin",
   },
+  skinTypePillar: {
+    title: "Best Lifting Cream by Skin Type 2026 | Find Your Perfect Match",
+    description: "Discover the best lifting cream for your specific skin type. Expert guides for oily, dry, sensitive, mature, and combination skin with personalized recommendations.",
+    path: "/best-lifting-cream-by-skin-type",
+  },
 };
 
 // Generate Organization Schema
