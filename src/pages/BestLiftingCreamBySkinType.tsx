@@ -61,7 +61,7 @@ const skinTypes = [
     url: "/best-lifting-cream-dry-skin",
     productCount: 15,
     topPick: "La Prairie Skin Caviar Liquid Lift",
-    isAvailable: false,
+    isAvailable: true,
   },
   {
     id: "sensitive",
@@ -76,7 +76,7 @@ const skinTypes = [
     url: "/best-lifting-cream-sensitive-skin",
     productCount: 10,
     topPick: "Drunk Elephant Protini Polypeptide Cream",
-    isAvailable: false,
+    isAvailable: true,
   },
   {
     id: "mature",
@@ -91,7 +91,7 @@ const skinTypes = [
     url: "/best-lifting-cream-mature-skin",
     productCount: 18,
     topPick: "Augustinus Bader The Cream",
-    isAvailable: false,
+    isAvailable: true,
   },
   {
     id: "combination",
@@ -106,7 +106,7 @@ const skinTypes = [
     url: "/best-lifting-cream-combination-skin",
     productCount: 14,
     topPick: "Round Lab Deep Collagen Firming Cream",
-    isAvailable: false,
+    isAvailable: true,
   },
 ];
 

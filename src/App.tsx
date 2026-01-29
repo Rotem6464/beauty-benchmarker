@@ -14,8 +14,12 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 import Contact from "./pages/Contact";
-import BestLiftingCreamOilySkin from "./pages/BestLiftingCreamOilySkin";
 import BestLiftingCreamBySkinType from "./pages/BestLiftingCreamBySkinType";
+import BestLiftingCreamOilySkin from "./pages/BestLiftingCreamOilySkin";
+import BestLiftingCreamDrySkin from "./pages/BestLiftingCreamDrySkin";
+import BestLiftingCreamSensitiveSkin from "./pages/BestLiftingCreamSensitiveSkin";
+import BestLiftingCreamMatureSkin from "./pages/BestLiftingCreamMatureSkin";
+import BestLiftingCreamCombinationSkin from "./pages/BestLiftingCreamCombinationSkin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,9 +35,19 @@ const App = () => (
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
             <Route path="/best-lift-creams" element={<BestLiftCreams />} />
+            
+            {/* Skin Type Pillar & Spokes */}
             <Route path="/best-lifting-cream-by-skin-type" element={<BestLiftingCreamBySkinType />} />
             <Route path="/best-lifting-cream-oily-skin" element={<BestLiftingCreamOilySkin />} />
+            <Route path="/best-lifting-cream-dry-skin" element={<BestLiftingCreamDrySkin />} />
+            <Route path="/best-lifting-cream-sensitive-skin" element={<BestLiftingCreamSensitiveSkin />} />
+            <Route path="/best-lifting-cream-mature-skin" element={<BestLiftingCreamMatureSkin />} />
+            <Route path="/best-lifting-cream-combination-skin" element={<BestLiftingCreamCombinationSkin />} />
+            
+            {/* Product Reviews */}
             <Route path="/reviews/:productId" element={<ProductReview />} />
+            
+            {/* Editorial */}
             <Route path="/editorial-mission" element={<EditorialMission />} />
             <Route path="/how-we-test" element={<HowWeTest />} />
             <Route path="/experts" element={<ExpertTeam />} />

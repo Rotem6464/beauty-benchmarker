@@ -69,6 +69,26 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: "Tired of greasy lifting creams? We tested 60+ formulas on oily skin. Discover oil-free, non-comedogenic creams that firm skin without breakouts or shine.",
     path: "/best-lifting-cream-oily-skin",
   },
+  drySkin: {
+    title: "Best Lifting Cream for Dry Skin 2026 | Rich & Hydrating Formulas",
+    description: "Luxuriously hydrating lifting creams for dry, dehydrated skin. Rich formulas with ceramides and peptides that firm while deeply moisturizing.",
+    path: "/best-lifting-cream-dry-skin",
+  },
+  sensitiveSkin: {
+    title: "Best Lifting Cream for Sensitive Skin 2026 | Gentle & Fragrance-Free",
+    description: "Hypoallergenic lifting creams tested on reactive skin. Fragrance-free, gentle formulas that firm without irritation or redness.",
+    path: "/best-lifting-cream-sensitive-skin",
+  },
+  matureSkin: {
+    title: "Best Lifting Cream for Mature Skin 2026 | Maximum Anti-Aging Power",
+    description: "Powerful lifting creams for 50+ skin. Clinically proven formulas with retinol, peptides, and growth factors for visible wrinkle reduction.",
+    path: "/best-lifting-cream-mature-skin",
+  },
+  combinationSkin: {
+    title: "Best Lifting Cream for Combination Skin 2026 | Balanced Formulas",
+    description: "Adaptable lifting creams that hydrate dry cheeks without making your T-zone greasy. Zone-tested for balanced results.",
+    path: "/best-lifting-cream-combination-skin",
+  },
   skinTypePillar: {
     title: "Best Lifting Cream by Skin Type 2026 | Find Your Perfect Match",
     description: "Discover the best lifting cream for your specific skin type. Expert guides for oily, dry, sensitive, mature, and combination skin with personalized recommendations.",
