@@ -15,6 +15,7 @@ import TermsOfService from "./pages/TermsOfService";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 import Contact from "./pages/Contact";
 import BestLiftingCreamOilySkin from "./pages/BestLiftingCreamOilySkin";
+import BestLiftingCreamBySkinType from "./pages/BestLiftingCreamBySkinType";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
             <Route path="/best-lift-creams" element={<BestLiftCreams />} />
+            <Route path="/best-lifting-cream-by-skin-type" element={<BestLiftingCreamBySkinType />} />
             <Route path="/best-lifting-cream-oily-skin" element={<BestLiftingCreamOilySkin />} />
             <Route path="/reviews/:productId" element={<ProductReview />} />
             <Route path="/editorial-mission" element={<EditorialMission />} />
