@@ -64,6 +64,11 @@ export const PAGE_SEO: Record<string, PageSEO> = {
     description: "Get in touch with our editorial team. Questions, corrections, or feedback - we'd love to hear from you.",
     path: "/contact",
   },
+  oilySkin: {
+    title: "Best Lifting Cream for Oily Skin 2026 | Non-Comedogenic & Mattifying",
+    description: "Tired of greasy lifting creams? We tested 60+ formulas on oily skin. Discover oil-free, non-comedogenic creams that firm skin without breakouts or shine.",
+    path: "/best-lifting-cream-oily-skin",
+  },
 };
 
 // Generate Organization Schema
@@ -143,6 +148,7 @@ export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
 export const ALL_ROUTES = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
   { path: "/best-lift-creams", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-lifting-cream-oily-skin", priority: 0.9, changefreq: "weekly" },
   { path: "/editorial-mission", priority: 0.8, changefreq: "monthly" },
   { path: "/how-we-test", priority: 0.8, changefreq: "monthly" },
   { path: "/experts", priority: 0.7, changefreq: "monthly" },
