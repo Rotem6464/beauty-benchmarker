@@ -1,6 +1,14 @@
 # SPA fallback routing for Netlify and Cloudflare Pages
 # Static files are served directly with force flag, all other routes serve index.html
 
+# 301 Redirects for old skin type URLs
+/best-lifting-cream-by-skin-type    /best-by-skin-type    301
+/best-lifting-cream-oily-skin       /best-by-skin-type/oily-skin    301
+/best-lifting-cream-dry-skin        /best-by-skin-type/dry-skin    301
+/best-lifting-cream-sensitive-skin  /best-by-skin-type/sensitive-skin    301
+/best-lifting-cream-mature-skin     /best-by-skin-type/mature-skin    301
+/best-lifting-cream-combination-skin /best-by-skin-type/combination-skin    301
+
 # Static files - served directly with correct MIME types (! forces the rule)
 /robots.txt    /robots.txt    200!
 /sitemap.xml   /sitemap.xml   200!
