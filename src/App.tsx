@@ -37,12 +37,12 @@ const App = () => (
             <Route path="/best-lift-creams" element={<BestLiftCreams />} />
             
             {/* Skin Type Pillar & Spokes */}
-            <Route path="/best-lifting-cream-by-skin-type" element={<BestLiftingCreamBySkinType />} />
-            <Route path="/best-lifting-cream-oily-skin" element={<BestLiftingCreamOilySkin />} />
-            <Route path="/best-lifting-cream-dry-skin" element={<BestLiftingCreamDrySkin />} />
-            <Route path="/best-lifting-cream-sensitive-skin" element={<BestLiftingCreamSensitiveSkin />} />
-            <Route path="/best-lifting-cream-mature-skin" element={<BestLiftingCreamMatureSkin />} />
-            <Route path="/best-lifting-cream-combination-skin" element={<BestLiftingCreamCombinationSkin />} />
+            <Route path="/best-by-skin-type" element={<BestLiftingCreamBySkinType />} />
+            <Route path="/best-by-skin-type/oily-skin" element={<BestLiftingCreamOilySkin />} />
+            <Route path="/best-by-skin-type/dry-skin" element={<BestLiftingCreamDrySkin />} />
+            <Route path="/best-by-skin-type/sensitive-skin" element={<BestLiftingCreamSensitiveSkin />} />
+            <Route path="/best-by-skin-type/mature-skin" element={<BestLiftingCreamMatureSkin />} />
+            <Route path="/best-by-skin-type/combination-skin" element={<BestLiftingCreamCombinationSkin />} />
             
             {/* Product Reviews */}
             <Route path="/reviews/:productId" element={<ProductReview />} />

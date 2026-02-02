@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 const footerLinks = {
   products: [
     { label: "All Lifting Creams", href: "/best-lift-creams" },
-    { label: "Best for Oily Skin", href: "/best-lifting-cream-oily-skin" },
-    { label: "Best for Dry Skin", href: "/best-lift-creams?skin=dry" },
-    { label: "Best for Sensitive Skin", href: "/best-lift-creams?skin=sensitive" },
+    { label: "Best for Oily Skin", href: "/best-by-skin-type/oily-skin" },
+    { label: "Best for Dry Skin", href: "/best-by-skin-type/dry-skin" },
+    { label: "Best for Sensitive Skin", href: "/best-by-skin-type/sensitive-skin" },
   ],
   company: [
     { label: "Editorial Mission", href: "/editorial-mission" },
     { label: "How We Test", href: "/how-we-test" },
-    { label: "Our Expert Team", href: "/experts" },
     { label: "Contact Us", href: "/contact" },
   ],
   legal: [

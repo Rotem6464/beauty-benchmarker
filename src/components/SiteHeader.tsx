@@ -13,21 +13,20 @@ import {
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/best-lift-creams", label: "Best Lift Creams" },
+  { href: "/best-lift-creams", label: "Best Lifting Creams" },
 ];
 
 const skinTypeLinks = [
-  { href: "/best-lifting-cream-by-skin-type", label: "All Skin Types", icon: null, isParent: true },
-  { href: "/best-lifting-cream-oily-skin", label: "Oily Skin", icon: Sun },
-  { href: "/best-lifting-cream-dry-skin", label: "Dry Skin", icon: Droplets },
-  { href: "/best-lifting-cream-sensitive-skin", label: "Sensitive Skin", icon: Shield },
-  { href: "/best-lifting-cream-mature-skin", label: "Mature Skin", icon: Sparkles },
-  { href: "/best-lifting-cream-combination-skin", label: "Combination Skin", icon: Zap },
+  { href: "/best-by-skin-type", label: "All Skin Types", icon: null, isParent: true },
+  { href: "/best-by-skin-type/oily-skin", label: "Oily Skin", icon: Sun },
+  { href: "/best-by-skin-type/dry-skin", label: "Dry Skin", icon: Droplets },
+  { href: "/best-by-skin-type/sensitive-skin", label: "Sensitive Skin", icon: Shield },
+  { href: "/best-by-skin-type/mature-skin", label: "Mature Skin", icon: Sparkles },
+  { href: "/best-by-skin-type/combination-skin", label: "Combination Skin", icon: Zap },
 ];
 
 const moreLinks = [
   { href: "/how-we-test", label: "How We Test" },
-  { href: "/experts", label: "Our Experts" },
   { href: "/editorial-mission", label: "About" },
 ];
 
@@ -39,10 +38,13 @@ export function SiteHeader() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link 
           to="/" 
-          className="text-xl font-bold text-brand-600"
           aria-label="BestLiftingCream.com - Home"
         >
-          BestLiftingCream.com
+          <img 
+            src="/favicon-32x32.png" 
+            alt="BFC" 
+            className="h-8 w-8"
+          />
         </Link>
 
         {/* Desktop Navigation */}
