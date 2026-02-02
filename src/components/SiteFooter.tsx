@@ -107,6 +107,21 @@ export function SiteFooter() {
               Learn more
             </Link>
           </p>
+          
+          {/* AI Agent Ready Badge */}
+          <div className="mt-4">
+            <a 
+              href="https://registerskill.com/skill/bestliftingcream-com/skill.md" 
+              target="_blank" 
+              rel="noopener"
+            >
+              <img 
+                src="https://registerskill.com/badge/bestliftingcream-com.svg" 
+                alt="AI Agent Ready: bestliftingcream-com" 
+                className="inline-block"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>
