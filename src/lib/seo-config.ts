@@ -67,32 +67,32 @@ export const PAGE_SEO: Record<string, PageSEO> = {
   oilySkin: {
     title: "Best Lifting Cream for Oily Skin 2026 | Non-Comedogenic & Mattifying",
     description: "Tired of greasy lifting creams? We tested 60+ formulas on oily skin. Discover oil-free, non-comedogenic creams that firm skin without breakouts or shine.",
-    path: "/best-lifting-cream-oily-skin",
+    path: "/best-by-skin-type/oily-skin",
   },
   drySkin: {
     title: "Best Lifting Cream for Dry Skin 2026 | Rich & Hydrating Formulas",
     description: "Luxuriously hydrating lifting creams for dry, dehydrated skin. Rich formulas with ceramides and peptides that firm while deeply moisturizing.",
-    path: "/best-lifting-cream-dry-skin",
+    path: "/best-by-skin-type/dry-skin",
   },
   sensitiveSkin: {
     title: "Best Lifting Cream for Sensitive Skin 2026 | Gentle & Fragrance-Free",
     description: "Hypoallergenic lifting creams tested on reactive skin. Fragrance-free, gentle formulas that firm without irritation or redness.",
-    path: "/best-lifting-cream-sensitive-skin",
+    path: "/best-by-skin-type/sensitive-skin",
   },
   matureSkin: {
     title: "Best Lifting Cream for Mature Skin 2026 | Maximum Anti-Aging Power",
     description: "Powerful lifting creams for 50+ skin. Clinically proven formulas with retinol, peptides, and growth factors for visible wrinkle reduction.",
-    path: "/best-lifting-cream-mature-skin",
+    path: "/best-by-skin-type/mature-skin",
   },
   combinationSkin: {
     title: "Best Lifting Cream for Combination Skin 2026 | Balanced Formulas",
     description: "Adaptable lifting creams that hydrate dry cheeks without making your T-zone greasy. Zone-tested for balanced results.",
-    path: "/best-lifting-cream-combination-skin",
+    path: "/best-by-skin-type/combination-skin",
   },
   skinTypePillar: {
     title: "Best Lifting Cream by Skin Type 2026 | Find Your Perfect Match",
     description: "Discover the best lifting cream for your specific skin type. Expert guides for oily, dry, sensitive, mature, and combination skin with personalized recommendations.",
-    path: "/best-lifting-cream-by-skin-type",
+    path: "/best-by-skin-type",
   },
 };
 
@@ -173,10 +173,14 @@ export const getFAQSchema = (faqs: { question: string; answer: string }[]) => ({
 export const ALL_ROUTES = [
   { path: "/", priority: 1.0, changefreq: "weekly" },
   { path: "/best-lift-creams", priority: 0.9, changefreq: "weekly" },
-  { path: "/best-lifting-cream-oily-skin", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type/oily-skin", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type/dry-skin", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type/sensitive-skin", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type/mature-skin", priority: 0.9, changefreq: "weekly" },
+  { path: "/best-by-skin-type/combination-skin", priority: 0.9, changefreq: "weekly" },
   { path: "/editorial-mission", priority: 0.8, changefreq: "monthly" },
   { path: "/how-we-test", priority: 0.8, changefreq: "monthly" },
-  { path: "/experts", priority: 0.7, changefreq: "monthly" },
   { path: "/privacy", priority: 0.3, changefreq: "yearly" },
   { path: "/terms", priority: 0.3, changefreq: "yearly" },
   { path: "/affiliate-disclosure", priority: 0.4, changefreq: "yearly" },
