@@ -1,15 +1,12 @@
 # Robots.txt for BestLiftingCream.com
-# https://bestliftcream.com/robots.txt
+# https://bestliftingcream.com/robots.txt
 
-# Allow all crawlers access to public content
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /_dev/
-Disallow: /*.json$
 
-# Specific bot allowances
 User-agent: Googlebot
 Allow: /
 
@@ -25,8 +22,6 @@ Allow: /
 User-agent: LinkedInBot
 Allow: /
 
-# Sitemap location
-Sitemap: https://bestliftcream.com/sitemap.xml
+Sitemap: https://bestliftingcream.com/sitemap.xml
 
-# Preferred host
-Host: https://bestliftcream.com
+Host: https://bestliftingcream.com

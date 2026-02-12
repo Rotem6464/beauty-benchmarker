@@ -1,7 +1,7 @@
 // SEO Configuration for BestLiftingCream.com
 export const SITE_CONFIG = {
   name: "BestLiftingCream.com",
-  url: "https://bestliftcream.com",
+  url: "https://bestliftingcream.com",
   description: "Compare 60+ lifting creams by skin type, climate, age, ingredients, and price. Expert-tested recommendations for firmer, younger-looking skin.",
   author: "BestLiftingCream.com Editorial Team",
   twitterHandle: "@BestLiftCream",
@@ -110,7 +110,7 @@ export const getOrganizationSchema = () => ({
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "contact@bestliftcream.com",
+    email: "contact@bestliftingcream.com",
     contactType: "customer service",
   },
 });

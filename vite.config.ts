@@ -18,4 +18,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    // Bundle these CJS modules for SSG build instead of externalizing
+    noExternal: ["react-helmet-async"],
+  },
 }));
