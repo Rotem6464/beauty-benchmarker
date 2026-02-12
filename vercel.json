@@ -1,31 +1,22 @@
 {
-  "trailingSlash": false,
-  "cleanUrls": true,
   "redirects": [
-    { "source": "/best-lifting-cream-by-skin-type", "destination": "/best-by-skin-type", "permanent": true },
-    { "source": "/best-lifting-cream-oily-skin", "destination": "/best-by-skin-type/oily-skin", "permanent": true },
-    { "source": "/best-lifting-cream-dry-skin", "destination": "/best-by-skin-type/dry-skin", "permanent": true },
-    { "source": "/best-lifting-cream-sensitive-skin", "destination": "/best-by-skin-type/sensitive-skin", "permanent": true },
-    { "source": "/best-lifting-cream-mature-skin", "destination": "/best-by-skin-type/mature-skin", "permanent": true },
-    { "source": "/best-lifting-cream-combination-skin", "destination": "/best-by-skin-type/combination-skin", "permanent": true }
-  ],
-  "headers": [
     {
-      "source": "/sitemap.xml",
-      "headers": [
-        { "key": "Content-Type", "value": "application/xml" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
-      ]
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "bestliftcream.com" }],
+      "destination": "https://bestliftingcream.com/$1",
+      "permanent": true
     },
     {
-      "source": "/robots.txt",
-      "headers": [
-        { "key": "Content-Type", "value": "text/plain" },
-        { "key": "Cache-Control", "value": "public, max-age=3600" }
-      ]
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.bestliftcream.com" }],
+      "destination": "https://bestliftingcream.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.bestliftingcream.com" }],
+      "destination": "https://bestliftingcream.com/$1",
+      "permanent": true
     }
-  ],
-  "rewrites": [
-    { "source": "/((?!robots\\.txt|sitemap\\.xml|favicon\\.ico|images/.*).*)", "destination": "/index.html" }
   ]
 }
