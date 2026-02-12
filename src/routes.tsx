@@ -17,6 +17,7 @@ import TermsOfService from "./pages/TermsOfService";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import BestLiftingCreamForJowls from "./pages/BestLiftingCreamForJowls";
 
 // All product IDs for static path generation
 const PRODUCT_IDS = [
@@ -59,6 +60,7 @@ export const routes: RouteRecord[] = [
       { path: "terms", element: <TermsOfService /> },
       { path: "affiliate-disclosure", element: <AffiliateDisclosure /> },
       { path: "contact", element: <Contact /> },
+      { path: "best-lifting-cream-for-jowls", element: <BestLiftingCreamForJowls /> },
       { path: "*", element: <NotFound /> },
     ],
   },
