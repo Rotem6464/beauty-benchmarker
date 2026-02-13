@@ -21,6 +21,7 @@ import BestLiftingCreamSensitiveSkin from "./pages/BestLiftingCreamSensitiveSkin
 import BestLiftingCreamMatureSkin from "./pages/BestLiftingCreamMatureSkin";
 import BestLiftingCreamCombinationSkin from "./pages/BestLiftingCreamCombinationSkin";
 import BestLiftingCreamForJowlsArticle from "./pages/BestLiftingCreamForJowlsArticle";
+import BestRetinolCreamForJowlsArticle from "./pages/BestRetinolCreamForJowlsArticle";
 import BestLiftingCreamForWomenOver50Article from "./pages/BestLiftingCreamForWomenOver50Article";
 import VeganLiftingCreamForJowlsArticle from "./pages/VeganLiftingCreamForJowlsArticle";
 import IdealiftVsRetinolJowlsArticle from "./pages/IdealiftVsRetinolJowlsArticle";
@@ -58,6 +59,7 @@ const App = () => (
             
             {/* Articles */}
             <Route path="/best-lifting-cream-for-jowls" element={<BestLiftingCreamForJowlsArticle />} />
+            <Route path="/best-retinol-cream-for-jowls" element={<BestRetinolCreamForJowlsArticle />} />
             <Route path="/best-lifting-cream-for-women-over-50" element={<BestLiftingCreamForWomenOver50Article />} />
             <Route path="/vegan-lifting-cream-for-jowls" element={<VeganLiftingCreamForJowlsArticle />} />
             <Route path="/idealift-vs-retinol-jowls" element={<IdealiftVsRetinolJowlsArticle />} />
