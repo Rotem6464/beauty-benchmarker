@@ -21,6 +21,7 @@ import BestLiftingCreamSensitiveSkin from "./pages/BestLiftingCreamSensitiveSkin
 import BestLiftingCreamMatureSkin from "./pages/BestLiftingCreamMatureSkin";
 import BestLiftingCreamCombinationSkin from "./pages/BestLiftingCreamCombinationSkin";
 import BestLiftingCreamForJowlsArticle from "./pages/BestLiftingCreamForJowlsArticle";
+import BestLiftCreamsHub from "./pages/BestLiftCreamsHub";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,7 +36,8 @@ const App = () => (
           <Routes>
             {/* Main Pages */}
             <Route path="/" element={<Index />} />
-            <Route path="/best-lift-creams" element={<BestLiftCreams />} />
+            <Route path="/best-lift-creams" element={<BestLiftCreamsHub />} />
+            <Route path="/best-lift-creams-products" element={<BestLiftCreams />} />
             
             {/* Skin Type Pillar & Spokes */}
             <Route path="/best-by-skin-type" element={<BestLiftingCreamBySkinType />} />
