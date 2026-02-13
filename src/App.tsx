@@ -21,6 +21,15 @@ import BestLiftingCreamSensitiveSkin from "./pages/BestLiftingCreamSensitiveSkin
 import BestLiftingCreamMatureSkin from "./pages/BestLiftingCreamMatureSkin";
 import BestLiftingCreamCombinationSkin from "./pages/BestLiftingCreamCombinationSkin";
 import BestLiftingCreamForJowlsArticle from "./pages/BestLiftingCreamForJowlsArticle";
+import BestLiftingCreamForWomenOver50Article from "./pages/BestLiftingCreamForWomenOver50Article";
+import VeganLiftingCreamForJowlsArticle from "./pages/VeganLiftingCreamForJowlsArticle";
+import IdealiftVsRetinolJowlsArticle from "./pages/IdealiftVsRetinolJowlsArticle";
+import WhyNeckCreamDoesntWorkJowlsArticle from "./pages/WhyNeckCreamDoesntWorkJowlsArticle";
+import BestLiftingCreamForTurkeyNeckArticle from "./pages/BestLiftingCreamForTurkeyNeckArticle";
+import BestAffordableLiftingCreamUnder50Article from "./pages/BestAffordableLiftingCreamUnder50Article";
+import HowToApplyLiftingCreamArticle from "./pages/HowToApplyLiftingCreamArticle";
+import DoLiftingCreamsWorkArticle from "./pages/DoLiftingCreamsWorkArticle";
+import BestLiftingCreamForMenopauseSkinArticle from "./pages/BestLiftingCreamForMenopauseSkinArticle";
 import BestLiftCreamsHub from "./pages/BestLiftCreamsHub";
 import NotFound from "./pages/NotFound";
 
@@ -49,6 +58,15 @@ const App = () => (
             
             {/* Articles */}
             <Route path="/best-lifting-cream-for-jowls" element={<BestLiftingCreamForJowlsArticle />} />
+            <Route path="/best-lifting-cream-for-women-over-50" element={<BestLiftingCreamForWomenOver50Article />} />
+            <Route path="/vegan-lifting-cream-for-jowls" element={<VeganLiftingCreamForJowlsArticle />} />
+            <Route path="/idealift-vs-retinol-jowls" element={<IdealiftVsRetinolJowlsArticle />} />
+            <Route path="/why-neck-cream-doesnt-work-jowls" element={<WhyNeckCreamDoesntWorkJowlsArticle />} />
+            <Route path="/best-lifting-cream-for-turkey-neck" element={<BestLiftingCreamForTurkeyNeckArticle />} />
+            <Route path="/best-affordable-lifting-cream-under-50" element={<BestAffordableLiftingCreamUnder50Article />} />
+            <Route path="/how-to-apply-lifting-cream" element={<HowToApplyLiftingCreamArticle />} />
+            <Route path="/do-lifting-creams-work" element={<DoLiftingCreamsWorkArticle />} />
+            <Route path="/best-lifting-cream-for-menopause-skin" element={<BestLiftingCreamForMenopauseSkinArticle />} />
             
             {/* Product Reviews */}
             <Route path="/reviews/:productId" element={<ProductReview />} />
