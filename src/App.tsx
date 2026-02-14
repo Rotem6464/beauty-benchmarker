@@ -31,6 +31,8 @@ import BestAffordableLiftingCreamUnder50Article from "./pages/BestAffordableLift
 import HowToApplyLiftingCreamArticle from "./pages/HowToApplyLiftingCreamArticle";
 import DoLiftingCreamsWorkArticle from "./pages/DoLiftingCreamsWorkArticle";
 import BestLiftingCreamForMenopauseSkinArticle from "./pages/BestLiftingCreamForMenopauseSkinArticle";
+import BestExosomeCreamArticle from "./pages/BestExosomeCreamArticle";
+import BestBodyRetinolForNeckArticle from "./pages/BestBodyRetinolForNeckArticle";
 import BestLiftCreamsHub from "./pages/BestLiftCreamsHub";
 import NotFound from "./pages/NotFound";
 
@@ -69,6 +71,8 @@ const App = () => (
             <Route path="/how-to-apply-lifting-cream" element={<HowToApplyLiftingCreamArticle />} />
             <Route path="/do-lifting-creams-work" element={<DoLiftingCreamsWorkArticle />} />
             <Route path="/best-lifting-cream-for-menopause-skin" element={<BestLiftingCreamForMenopauseSkinArticle />} />
+            <Route path="/best-exosome-cream" element={<BestExosomeCreamArticle />} />
+            <Route path="/best-body-retinol-for-neck" element={<BestBodyRetinolForNeckArticle />} />
             
             {/* Product Reviews */}
             <Route path="/reviews/:productId" element={<ProductReview />} />
