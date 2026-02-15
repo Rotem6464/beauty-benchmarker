@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/beauty-benchmarker/',
+  base: process.env.VERCEL || process.env.NETLIFY ? '/' : '/beauty-benchmarker/',  
   server: {
     host: "::",
     port: 8080,
