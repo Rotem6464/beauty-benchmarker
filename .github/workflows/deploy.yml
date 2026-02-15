@@ -6,16 +6,16 @@ on:
             - main
               workflow_dispatch:
 
-             permissions:
+              permissions:
                 contents: write
                   pages: write
                     id-token: write
 
-                   concurrency:
+                    concurrency:
                       group: "pages"
                         cancel-in-progress: false
 
-                       jobs:
+                        jobs:
                           build-and-deploy:
                               runs-on: ubuntu-latest
 
