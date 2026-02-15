@@ -34,6 +34,7 @@ import BestLiftingCreamForMenopauseSkinArticle from "./pages/BestLiftingCreamFor
 import BestExosomeCreamArticle from "./pages/BestExosomeCreamArticle";
 import BestBodyRetinolForNeckArticle from "./pages/BestBodyRetinolForNeckArticle";
 import BestLiftCreamsHub from "./pages/BestLiftCreamsHub";
+import BestExosomeCreamForJowlsArticle from "./pages/BestExosomeCreamForJowlsArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -73,6 +74,8 @@ const App = () => (
             <Route path="/best-lifting-cream-for-menopause-skin" element={<BestLiftingCreamForMenopauseSkinArticle />} />
             <Route path="/best-exosome-cream" element={<BestExosomeCreamArticle />} />
             <Route path="/best-body-retinol-for-neck" element={<BestBodyRetinolForNeckArticle />} />
+            
+            <Route path="/exosome-cream-for-jowls" element={<BestExosomeCreamForJowlsArticle />} />
             
             {/* Product Reviews */}
             <Route path="/reviews/:productId" element={<ProductReview />} />

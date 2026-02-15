@@ -30,6 +30,7 @@ import BestAffordableLiftingCreamUnder50Article from "./pages/BestAffordableLift
 import HowToApplyLiftingCreamArticle from "./pages/HowToApplyLiftingCreamArticle";
 import DoLiftingCreamsWorkArticle from "./pages/DoLiftingCreamsWorkArticle";
 import BestLiftingCreamForMenopauseSkinArticle from "./pages/BestLiftingCreamForMenopauseSkinArticle";
+import BestExosomeCreamForJowlsArticle from "./pages/BestExosomeCreamForJowlsArticle";
 
 // All product IDs for static path generation
 const PRODUCT_IDS = [
@@ -86,6 +87,7 @@ export const routes: RouteRecord[] = [
       { path: "terms", element: <TermsOfService /> },
       { path: "affiliate-disclosure", element: <AffiliateDisclosure /> },
       { path: "contact", element: <Contact /> },
+      { path: "exosome-cream-for-jowls", element: <BestExosomeCreamForJowlsArticle /> },
       { path: "*", element: <NotFound /> },
     ],
   },
