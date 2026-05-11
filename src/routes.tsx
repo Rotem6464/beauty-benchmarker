@@ -18,7 +18,6 @@ import TermsOfService from "./pages/TermsOfService";
 import AffiliateDisclosure from "./pages/AffiliateDisclosure";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-
 // Article imports
 import BestLiftingCreamForJowlsArticle from "./pages/BestLiftingCreamForJowlsArticle";
 import BestLiftingCreamForWomenOver50Article from "./pages/BestLiftingCreamForWomenOver50Article";
@@ -31,6 +30,9 @@ import HowToApplyLiftingCreamArticle from "./pages/HowToApplyLiftingCreamArticle
 import DoLiftingCreamsWorkArticle from "./pages/DoLiftingCreamsWorkArticle";
 import BestLiftingCreamForMenopauseSkinArticle from "./pages/BestLiftingCreamForMenopauseSkinArticle";
 import BestExosomeCreamForJowlsArticle from "./pages/BestExosomeCreamForJowlsArticle";
+// Blog imports
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 // All product IDs for static path generation
 const PRODUCT_IDS = [
@@ -62,7 +64,6 @@ export const routes: RouteRecord[] = [
       { path: "best-by-skin-type/sensitive-skin", element: <BestLiftingCreamSensitiveSkin /> },
       { path: "best-by-skin-type/mature-skin", element: <BestLiftingCreamMatureSkin /> },
       { path: "best-by-skin-type/combination-skin", element: <BestLiftingCreamCombinationSkin /> },
-      
       // Articles (topical cluster)
       { path: "best-lifting-cream-for-jowls", element: <BestLiftingCreamForJowlsArticle /> },
       { path: "best-lifting-cream-for-women-over-50", element: <BestLiftingCreamForWomenOver50Article /> },
@@ -74,7 +75,6 @@ export const routes: RouteRecord[] = [
       { path: "how-to-apply-lifting-cream", element: <HowToApplyLiftingCreamArticle /> },
       { path: "do-lifting-creams-work", element: <DoLiftingCreamsWorkArticle /> },
       { path: "best-lifting-cream-for-menopause-skin", element: <BestLiftingCreamForMenopauseSkinArticle /> },
-      
       {
         path: "reviews/:productId",
         element: <ProductReview />,
@@ -88,6 +88,9 @@ export const routes: RouteRecord[] = [
       { path: "affiliate-disclosure", element: <AffiliateDisclosure /> },
       { path: "contact", element: <Contact /> },
       { path: "exosome-cream-for-jowls", element: <BestExosomeCreamForJowlsArticle /> },
+      // Blog routes
+      { path: "blog", element: <Blog /> },
+      { path: "blog/:slug", element: <BlogPost /> },
       { path: "*", element: <NotFound /> },
     ],
   },
