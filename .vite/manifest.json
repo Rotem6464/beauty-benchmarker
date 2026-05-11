@@ -1,0 +1,23 @@
+{
+  "_client-mD55CVQN.js": {
+    "file": "assets/client-mD55CVQN.js",
+    "name": "client",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/app-gTsNYFC6.js",
+    "name": "app",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_client-mD55CVQN.js",
+      "_client-mD55CVQN.js"
+    ],
+    "css": [
+      "assets/app-Q6kBf3Je.css"
+    ]
+  }
+}

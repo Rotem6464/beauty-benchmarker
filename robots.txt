@@ -1,0 +1,27 @@
+# Robots.txt for BestLiftingCream.com
+# https://bestliftingcream.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_dev/
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+Sitemap: https://bestliftingcream.com/sitemap.xml
+
+Host: https://bestliftingcream.com
