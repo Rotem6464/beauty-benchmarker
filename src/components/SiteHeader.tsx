@@ -14,6 +14,7 @@ import {
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/best-lift-creams", label: "Best Lifting Creams" },
+  { href: "/blog", label: "Blog" },
 ];
 
 const skinTypeLinks = [
